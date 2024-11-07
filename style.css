@@ -33,7 +33,7 @@ body {
     border: 1px solid black;
 }
 
-.cardImage{
+.cardImage {
     width: 290px;
     height: 200px;
     /* border: 1px solid black; */
@@ -42,16 +42,51 @@ body {
     margin-bottom: 13px;
 }
 
-.cardImage img{
+.cardImage img {
     width: 290px;
     height: 200px;
     overflow: hidden;
 }
 
-.carText{
+.carText {
     width: 280px;
     height: 30px;
     /* border: 1px solid black; */
     margin: 0 auto;
     text-align: center;
+}
+
+.viewer button {
+    width: 30px;
+    height: 30px;
+    margin-top: 9px;
+    margin-left: 95%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 10px 5px 20px 7px !important;
+}
+
+hr{
+    height: 4px;
+    background-color: black;
+}
+
+button :hover{
+    color: #ffff;
+    transition-duration: 2s;
+}
+
+.viewImg{
+    width: 80%;
+    height: 80vh;
+    border: 1px solid black;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.viewImg img {
+    width: 100%;
 }

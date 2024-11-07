@@ -60,14 +60,11 @@ let data = [
 //          function ****************************************
 
 function openViewer() {
-
-    let view = document.getElementsByClassName('viewer')[0];
     view.style.display = 'block';
     moviesCard.style.display = 'none';
 }
 
 function closeViewer() {
-    let view = document.getElementsByClassName('viewer')[0];
     view.style.display = 'none';
     moviesCard.style.display = 'flex';
 }
@@ -75,10 +72,12 @@ function closeViewer() {
 //           logic ******************************************
 
 let moviesCard = document.getElementsByClassName('section1')[0];
+let view = document.getElementsByClassName('viewer')[0];
+
+
+//           loop ********************************************
 
 for (var i in data) {
-
-    // console.log(i, data[i]);
 
     let card = document.createElement('div');
     let cardImage = document.createElement('div');
@@ -92,5 +91,11 @@ for (var i in data) {
     card.appendChild(carText);
 
     cardImage.innerHTML = `<img src="${data[i].Image}" alt="${data[i].name}">`;
-    carText.innerHTML = `<h3>${data[i].name}</h3>`
+    carText.innerHTML = `<h3>${data[i].name}</h3>`;
+
+    let viewImg =  document.createElement('div');
+    viewImg.setAttribute('class', 'viewImg');
+    view.appendChild(viewImg);
+
+    viewImg.innerHTML = `<img src="${data[i].Image}" alt="${data[i].name}">`
 }
