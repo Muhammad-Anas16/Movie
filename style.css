@@ -1,30 +1,57 @@
-body{
+body {
     padding: 0;
     margin: 0;
+    position: relative;
 }
 
-.header{
+.header {
     width: 100%;
     height: 60px;
     background-color: blue;
 }
 
-.main{
-    position: relative;
-}
-.viewer{
+.viewer {
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.137);
+    background-color: rgb(255, 255, 255);
     position: absolute;
     display: none;
 }
 
-section{
-    width: 75%;
-    border: 2px solid black;
+.section1 {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-video{
-    width: 100%;
+.card {
+    width: 310px;
+    height: 260px;
+    border: 1px solid black;
+}
+
+.cardImage{
+    width: 290px;
+    height: 200px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.cardImage img{
+    width: 290px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.carText{
+    width: 280px;
+    height: 30px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    text-align: center;
 }

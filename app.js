@@ -1,3 +1,6 @@
+
+//          all data of object ******************************
+
 let data = [
     {
         name: 'Avengers Endgame',
@@ -25,7 +28,7 @@ let data = [
 
     {
         name: "Zack Snyder's : Justice League",
-        Image: 'images/Justice League.jpg',
+        Image: 'images/justice-league.jpg',
         video: 'https://download.cdnnow.co/data1/enlishmoviesdub/Z/ZackSnydersJusticeLeague.2021.BRRip.Dual.mp4',
     },
 
@@ -54,23 +57,40 @@ let data = [
     },
 ]
 
+//          function ****************************************
+
 function openViewer() {
+
     let view = document.getElementsByClassName('viewer')[0];
     view.style.display = 'block';
+    moviesCard.style.display = 'none';
 }
 
 function closeViewer() {
     let view = document.getElementsByClassName('viewer')[0];
     view.style.display = 'none';
+    moviesCard.style.display = 'flex';
 }
 
-let setImg = document.getElementById('img1');
-setImg.setAttribute('src', data[5].Image);
+//           logic ******************************************
 
-// for (var i in data) {
-//     if (typeof (data[i]) === `object`) {
-//         for(var key in data[i]){
-//             console.log(key, data[i][key]);
-//         }
-//     }
-// }
+let moviesCard = document.getElementsByClassName('section1')[0];
+
+for (var i in data) {
+
+    // console.log(i, data[i]);
+
+    let card = document.createElement('div');
+    let cardImage = document.createElement('div');
+    let carText = document.createElement('div');
+    card.setAttribute('class', 'card');
+    card.setAttribute('onClick', 'openViewer()');
+    cardImage.setAttribute('class', 'cardImage');
+    carText.setAttribute('class', 'carText');
+    moviesCard.appendChild(card);
+    card.appendChild(cardImage);
+    card.appendChild(carText);
+
+    cardImage.innerHTML = `<img src="${data[i].Image}" alt="${data[i].name}">`;
+    carText.innerHTML = `<h3>${data[i].name}</h3>`
+}
